@@ -1,22 +1,22 @@
 settings:
-  title: 'Read This Paper Status Page'
+  title: 'Read This Paper 狀態頁面 - Status Page'
   url: 'https://status.readthispaper.com' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
-  monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'Not Operational'
-  monitorLabelNoData: 'No data'
-  dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
-  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+  allmonitorsOperational: '全系統正常運作 - All Systems Operational'
+  notAllmonitorsOperational: '部分系統正常運作 - Not All Systems Operational'
+  monitorLabelOperational: '運作中 - Operational'
+  monitorLabelNotOperational: '異常 - Not Operational'
+  monitorLabelNoData: '無資料 - No data'
+  dayInHistogramNoData: '無資料 - No data'
+  dayInHistogramOperational: '全部正常 - All good'
+  dayInHistogramNotOperational: ' 事件/incident(s)' # xx incident(s) recorded
 
 monitors:
   - id: index-page # unique identifier
-    name: Read This Paper Frontend Service
+    name: Read This Paper 網頁服務 - Frontend Service
     description: 'Read This Paper Website' # default=empty
     url: 'http://www.readthispaper.com/' # URL to fetch
     method: GET # default=GET
@@ -25,7 +25,7 @@ monitors:
     linkable: true # allows the title to be a link, default=true
 
   - id: ss-search-api # unique identifier
-    name: RTP - Searching API (Semantic Scholar)
+    name: Searching API - 搜尋 API (Semantic Scholar)
     description: 'Read This Paper Searching API Status' # default=empty
     url: 'http://api.readthispaper.com/ss-srv/v1/query_page?query=bert&page_size=10&current_page=1' # URL to fetch
     method: GET # default=GET
@@ -34,7 +34,7 @@ monitors:
     linkable: false # allows the title to be a link, default=true
 
   - id: ss-reading-insight-api
-    name: RTP - Reading Insight API (Read This Paper - Reading Order)
+    name: Reading Insight API - 閱讀順序演算法 API (Read This Paper - Reading Order)
     description: 'Read This Paper Reading Insight API Status'
     url: 'https://api.readthispaper.com/ss-srv/v1/reading_insight/db1170606650201b5d4f262bdd96d517628a9c59'
     method: GET
@@ -42,7 +42,7 @@ monitors:
     linkable: false # allows the title to be a link, default=true
 
   - id: ss-key-concept-api
-    name: RTP - Key Insight API (Read This Paper - Key Concept)
+    name: Key Insight API - 關鍵概念演算法 API (Read This Paper - Key Concept)
     description: 'Read This Paper Key Insight API Status'
     url: 'https://api.readthispaper.com/ss-srv/v1/key_insight/db1170606650201b5d4f262bdd96d517628a9c59'
     method: GET
@@ -50,7 +50,7 @@ monitors:
     linkable: false # allows the title to be a link, default=true
     
   - id: ss-pwc-api
-    name: RTP - Paper with Code API (Paper with Code)
+    name: Paper with Code API (Paper with Code)
     description: 'Read This Paper Paper with Code API Status'
     url: 'https://api.readthispaper.com/cf/papers_with_code/?query=ALBERT:%20A%20Lite%20BERT%20for%20Self-supervised%20Learning%20of%20Language%20Representations'
     method: GET
