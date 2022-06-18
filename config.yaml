@@ -15,25 +15,44 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: index-page # unique identifier
+    name: Read This Paper Frontend Service
+    description: 'Read This Paper Website' # default=empty
+    url: 'http://www.readthispaper.com/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: true # allows the title to be a link, default=true
+
+  - id: ss-search-api # unique identifier
+    name: RTP - Searching API (Semantic Scholar)
+    description: 'Read This Paper Searching API Status' # default=empty
+    url: 'http://api.readthispaper.com/ss-srv/v1/query_page?query=bert&page_size=10&current_page=1' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: ss-reading-insight-api
+    name: RTP - Reading Insight API (Read This Paper - Reading Order)
+    description: 'Read This Paper Reading Insight API Status'
+    url: 'https://api.readthispaper.com/ss-srv/v1/reading_insight/db1170606650201b5d4f262bdd96d517628a9c59'
     method: GET
     expectStatus: 200
-    linkable: true # allows the title to be a link, default=true
+    linkable: false # allows the title to be a link, default=true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: ss-key-concept-api
+    name: RTP - Key Insight API (Read This Paper - Key Concept)
+    description: 'Read This Paper Key Insight API Status'
+    url: 'https://api.readthispaper.com/ss-srv/v1/key_insight/db1170606650201b5d4f262bdd96d517628a9c59'
     method: GET
     expectStatus: 200
+    linkable: false # allows the title to be a link, default=true
+    
+  - id: ss-pwc-api
+    name: RTP - Paper with Code API (Paper with Code)
+    description: 'Read This Paper Paper with Code API Status'
+    url: 'https://api.readthispaper.com/cf/papers_with_code/?query=ALBERT:%20A%20Lite%20BERT%20for%20Self-supervised%20Learning%20of%20Language%20Representations'
+    method: GET
+    expectStatus: 200
+    linkable: false # allows the title to be a link, default=true
