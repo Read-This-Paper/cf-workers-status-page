@@ -1,12 +1,12 @@
 settings:
-  title: 'Read This Paper 狀態/Status'
+  title: 'Read This Paper 狀態 / Status'
   url: 'https://status.readthispaper.com' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: '全系統正常運作 - All Systems Operational'
-  notAllmonitorsOperational: '部分系統正常運作 - Partial Systems Operational'
+  allmonitorsOperational: '正常運作 - All Systems Operational'
+  notAllmonitorsOperational: '部分正常運作 - Partial Systems Operational'
   monitorLabelOperational: '運作中 - Operational'
   monitorLabelNotOperational: '異常 - Not Operational'
   monitorLabelNoData: '無資料 - No data'
