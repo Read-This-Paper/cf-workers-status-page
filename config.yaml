@@ -21,7 +21,7 @@ monitors:
     url: 'http://www.readthispaper.com/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
-    followRedirect: false # should fetch follow redirects, default=false
+    followRedirect: true # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
 
   - id: ss-search-api # unique identifier
@@ -30,7 +30,7 @@ monitors:
     url: 'http://api.readthispaper.com/ss-srv/v1/query_page?query=bert&page_size=10&current_page=1' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
-    followRedirect: false # should fetch follow redirects, default=false
+    followRedirect: true # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
 
   - id: ss-reading-insight-api
