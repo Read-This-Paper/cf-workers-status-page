@@ -16,7 +16,7 @@ settings:
 
 monitors:
   - id: index-page # unique identifier
-    name: Read This Paper 網頁服務 - Frontend Service
+    name: Read This Paper 網頁 - Frontend
     description: 'Read This Paper Website' # default=empty
     url: 'http://www.readthispaper.com/' # URL to fetch
     method: GET # default=GET
