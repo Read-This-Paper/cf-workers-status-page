@@ -56,3 +56,11 @@ monitors:
     method: GET
     expectStatus: 200
     linkable: false # allows the title to be a link, default=true
+    
+  - id: skyup-gateway
+    name: SkyUp Gateway Test
+    description: 'Read This Paper Paper with Code API Status'
+    url: 'SkyUp Gateway Test'
+    method: GET
+    expectStatus: 401
+    linkable: false # allows the title to be a link, default=true
