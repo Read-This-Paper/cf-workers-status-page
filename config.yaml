@@ -60,7 +60,7 @@ monitors:
   - id: skyup-gateway
     name: SkyUp Gateway Test
     description: 'Read This Paper Paper with Code API Status'
-    url: 'SkyUp Gateway Test'
+    url: 'https://api-gateway-01.skyup.in/question-lake/api/v1/test/session'
     method: GET
     expectStatus: 401
     linkable: false # allows the title to be a link, default=true
